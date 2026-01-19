@@ -1,7 +1,11 @@
 import streamlit as st
 
 st.title("Layer's of the Earth 🌎")
-st.write("Coded by Caden Song")
+st.header("Coded by Caden Song")
+st.subheader("Introduction to App")
+st.markdown("To use this app, type a number into the Enter Depth box, then choose whether your depth is in Miles (mi) or Kilometers (km). After that, click the Find Info ✅ button, and the app will instantly show you information.")
+
+
 st.divider()
 
 unit_list = ("Miles(mi)", "Kilometers(km)")
