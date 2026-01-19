@@ -60,6 +60,9 @@ if find:
     else:
         material = "Unknown"
 
+    st.divider()
+    st.header("Results")
+
     st.write("Layer:", layer)
 
     if temp == "Invalid" or temp == "Outside Earth":
