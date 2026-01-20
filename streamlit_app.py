@@ -77,3 +77,5 @@ if find:
         st.write("Temp:", temp)
     else:
         st.write("Temp:", round(temp, 2), "°C")
+
+
