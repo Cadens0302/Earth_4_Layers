@@ -112,8 +112,14 @@ with tab2:
         else:
             temp = 5000 + ((depth_km - 5100) * 1.10)
 
+        st.success("Done! ✅ Now go to the Results tab to see your results.")
+
 with tab3:
     st.header("Results 📌")
+
+    if layer == "":
+        st.warning("You haven't entered anything yet. Go to the Find Info tab, enter a depth, and click Find Info ✅.")
+        st.stop()
 
     if layer == "":
         st.write("Enter a depth in the Find Info tab and click Find Info.")
