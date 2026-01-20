@@ -3,7 +3,7 @@ import streamlit as st
 st.title("Layer's of the Earth 🌎")
 st.header("Coded by Caden Song")
 st.subheader("Intstructions")
-st.markdown("To use this app, type a number into the **Enter Depth** box, then choose whether your depth is in Miles(mi) or Kilometers(km). After that, click the Find Info button, and the app will instantly calculate the necessary information.")
+st.markdown("To use this app, type a number into the Enter Depth box, then choose whether your depth is in Miles(mi) or Kilometers(km). After that, click the Find Info button, and the app will instantly calculate the necessary information.")
 st.divider()
 
 unit_list = ("Miles(mi)", "Kilometers(km)")
@@ -13,7 +13,7 @@ st.header("Find Info")
 find_layer = st.text_input("Enter Depth")
 selected_option = st.selectbox("Enter Unit for Depth", unit_list)
 
-find = st.button("Find Info ✅")
+find = st.button("Find Info ")
 
 if find:
     if find_layer.strip() == "":
