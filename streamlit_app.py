@@ -17,7 +17,6 @@ unit_list = ("Miles(mi)", "Kilometers(km)")
 
 tab1, tab2, tab3 = st.tabs(["About", "Find Info", "Results"])
 
-# Defaults so Results tab never crashes
 layer = ""
 material = ""
 temp = 0
@@ -66,13 +65,11 @@ with tab2:
             st.warning("Please enter a number for depth (example: 120).")
             st.stop()
 
-        # convert to km
         if selected_option == "Miles(mi)":
             depth_km = depth * 1.60934
         else:
             depth_km = depth
 
-        # layer
         if depth_km < 0:
             layer = "Invalid Layer"
         elif depth_km <= 70:
@@ -86,11 +83,10 @@ with tab2:
         else:
             layer = "Outside Earth"
 
-        # material
         if layer == "Crust":
             material = "Solid Rock (Granite, Basalt)"
         elif layer == "Mantle":
-            material = "Solid Rock (Iron, Magnesium)"
+            material = "Semi-Solid Rock (Iron, Magnesium)"
         elif layer == "Outer Core":
             material = "Liquid Metal (Iron + Nickel)"
         elif layer == "Inner Core":
@@ -98,7 +94,6 @@ with tab2:
         else:
             material = "Unknown"
 
-        # temperature (more realistic)
         if depth_km < 0:
             temp = "Invalid"
         elif depth_km > 6371:
@@ -112,7 +107,7 @@ with tab2:
         else:
             temp = 5000 + ((depth_km - 5100) * 1.10)
 
-        st.success("Done! ✅ Now go to the Results tab to see your results.")
+        st.success("Done! Now go to the Results tab to see your results.")
 
 with tab3:
     st.header("Results 📌")
