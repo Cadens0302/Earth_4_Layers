@@ -1,81 +1,128 @@
 import streamlit as st
 
 st.title("Layer's of the Earth 🌎")
-st.header("Coded by Caden Song")
-st.subheader("Intstructions")
-st.markdown("To use this app, type a number into the Enter Depth box, then choose whether your depth is in Miles(mi) or Kilometers(km). After that, click the Find Info button, and the app will instantly calculate the necessary information.")
+st.subheader("Coded by Caden Song")
+st.divider()
+
+st.header("Instructions")
+st.write(
+    "To use this app, type a number into the Enter Depth box, then choose whether your depth is in Miles (mi) or "
+    "Kilometers (km). After that, click the Find Info  button, and the Results tab will show you the Earth layer, "
+    "material, temperature at that depth, etc."
+)
+
 st.divider()
 
 unit_list = ("Miles(mi)", "Kilometers(km)")
 
-st.header("Find Info")
+tab1, tab2, tab3 = st.tabs(["About", "Find Info", "Results"])
 
-find_layer = st.text_input("Enter Depth")
-selected_option = st.selectbox("Enter Unit for Depth", unit_list)
+# Defaults so Results tab never crashes
+layer = ""
+material = ""
+temp = 0
 
-find = st.button("Find Info ")
+with tab1:
+    st.header("About 🌍")
 
-if find:
-    if find_layer.strip() == "":
-        st.warning("Please enter a depth.")
-        st.stop()
+    st.write(
+        "This app helps you learn about Earth's layers by entering a depth and finding what layer you would be in. "
+        "It also shows the material in that layer and an estimated temperature."
+    )
 
-    depth = float(find_layer)
+    st.write("**Earth Layers Used in This App:**")
+    st.write("- Crust: 0 km to 70 km")
+    st.write("- Mantle: 70 km to 2900 km")
+    st.write("- Outer Core: 2900 km to 5100 km")
+    st.write("- Inner Core: 5100 km to 6371 km")
 
-    if selected_option == "Miles(mi)":
-        depth_km = depth * 1.60934
+    st.markdown(
+        "**IMPORTANT NOTE**: The temperature values are simplified estimates using formulas, so they might not be accurate."
+    )
+
+with tab2:
+    st.header("Find Info")
+    st.write("")
+
+    find_layer = st.text_input("Enter Depth")
+
+    selected_option = st.selectbox(
+        "Enter Unit for Depth",
+        unit_list
+    )
+    st.write("")
+    st.write("")
+
+    find = st.button("Find Info")
+
+    if find:
+        if find_layer.strip() == "":
+            st.warning("Please enter a depth.")
+            st.stop()
+
+        try:
+            depth = float(find_layer)
+        except:
+            st.warning("Please enter a number for depth (example: 120).")
+            st.stop()
+
+        # convert to km
+        if selected_option == "Miles(mi)":
+            depth_km = depth * 1.60934
+        else:
+            depth_km = depth
+
+        # layer
+        if depth_km < 0:
+            layer = "Invalid Layer"
+        elif depth_km <= 70:
+            layer = "Crust"
+        elif depth_km <= 2900:
+            layer = "Mantle"
+        elif depth_km <= 5100:
+            layer = "Outer Core"
+        elif depth_km <= 6371:
+            layer = "Inner Core"
+        else:
+            layer = "Outside Earth"
+
+        # material
+        if layer == "Crust":
+            material = "Solid Rock (Granite, Basalt)"
+        elif layer == "Mantle":
+            material = "Solid Rock (Iron, Magnesium)"
+        elif layer == "Outer Core":
+            material = "Liquid Metal (Iron + Nickel)"
+        elif layer == "Inner Core":
+            material = "Solid Metal (Iron + Nickel)"
+        else:
+            material = "Unknown"
+
+        # temperature (more realistic)
+        if depth_km < 0:
+            temp = "Invalid"
+        elif depth_km > 6371:
+            temp = "Outside Earth"
+        elif depth_km <= 70:
+            temp = 15 + (depth_km * 14)
+        elif depth_km <= 2900:
+            temp = 1000 + ((depth_km - 70) * 0.95)
+        elif depth_km <= 5100:
+            temp = 3700 + ((depth_km - 2900) * 0.60)
+        else:
+            temp = 5000 + ((depth_km - 5100) * 1.10)
+
+with tab3:
+    st.header("Results 📌")
+
+    if layer == "":
+        st.write("Enter a depth in the Find Info tab and click Find Info.")
     else:
-        depth_km = depth
+        st.write("Layer:", layer)
+        st.write("Material:", material)
 
-
-    if depth_km < 0:
-        layer = "Invalid Layer"
-    elif depth_km <= 70:
-        layer = "Crust"
-    elif depth_km <= 2900:
-        layer = "Mantle"
-    elif depth_km <= 5100:
-        layer = "Outer Core"
-    elif depth_km <= 6371:
-        layer = "Inner Core"
-    else:
-        layer = "Outside Earth"
-
-
-    if layer == "Crust":
-        material = "Solid Rock (Granite, Basalt)"
-    elif layer == "Mantle":
-        material = "Semi-Solid Rock (Iron, Magnesium, and Calcium)"
-    elif layer == "Outer Core":
-        material = "Liquid Metal (Iron, Nickel)"
-    elif layer == "Inner Core":
-        material = "Solid Metal (Iron + Nickel)"
-    else:
-        material = "Unknown"
-
-
-    if depth_km < 0:
-        temp = "Invalid"
-    elif depth_km > 6371:
-        temp = "Outside Earth"
-    elif depth_km <= 70:
-        temp = 15 + (depth_km * 14)
-    elif depth_km <= 2900:
-        temp = 1000 + ((depth_km - 70) * 0.95)
-    elif depth_km <= 5100:
-        temp = 3700 + ((depth_km - 2900) * 0.60)
-    else:
-        temp = 5000 + ((depth_km - 5100) * 1.10)
-
-    st.divider()
-    st.header("Results")
-
-    st.write("Layer:", layer)
-    st.write("Material:", material)
-
-    if temp == "Invalid" or temp == "Outside Earth":
-        st.write("Temp:", temp)
-    else:
-        st.write("Temp:", round(temp, 2), "°C")
-
+        if temp == "Invalid" or temp == "Outside Earth":
+            st.write("Estimated Temperature:", temp)
+        else:
+            st.write(" Estimated Temperature:", round(temp, 2), "°C")
 
