@@ -4,15 +4,6 @@ st.title("Layer's of the Earth 🌎")
 st.subheader("Coded by Caden Song")
 st.divider()
 
-#st.header("Instructions")
-#st.write(
-    #"To use this app, type a number into the Enter Depth box, then choose whether your depth is in Miles (mi) or "
-    #"Kilometers (km). After that, click the Find Info  button, and the Results tab will show you the Earth layer, "
-    #"material, temperature at that depth, etc."
-#)
-
-#st.divider()
-
 unit_list = ("Miles(mi)", "Kilometers(km)")
 
 tab1, tab2, tab3 = st.tabs(["About", "Find Info", "Results"])
