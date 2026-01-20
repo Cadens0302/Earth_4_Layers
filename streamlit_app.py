@@ -110,7 +110,7 @@ with tab2:
         st.success("Done! Now go to the Results tab to see your results.")
 
 with tab3:
-    st.header("Results 📌")
+    st.header("Results")
 
     if layer == "":
         st.warning("You haven't entered anything yet. Go to the Find Info tab, enter a depth, and click Find Info ✅.")
