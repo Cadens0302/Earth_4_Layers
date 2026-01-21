@@ -126,7 +126,7 @@ with tab_find_info:
 
 
 with tab_crust:
-    
+
     col1, col2 = st.columns([1, 2])
 
     st.header("Crust")
@@ -134,8 +134,8 @@ with tab_crust:
     with col1:
         st.write("To start off, the crust is the most outer layer of our plant, and is the thinist layer. It is 25 miles (40 kilometers) thick, and is made out of two diffrent types of crust, continental, and oceanic. ")
 
-    st.write("Information Found: https://education.nationalgeographic.org/resource/crust/")
-    st.write("Oceanic crust, the crust beneath the ocean floor, is mostly made up basalt. On the otherhand, continental crust is mostly composed of diffrent types granite, and can be much thicker that oceanic crust. ")
+        st.write("Information Found: https://education.nationalgeographic.org/resource/crust/")
+        st.write("Oceanic crust, the crust beneath the ocean floor, is mostly made up basalt. On the otherhand, continental crust is mostly composed of diffrent types granite, and can be much thicker that oceanic crust. ")
     
 
     with col2:
