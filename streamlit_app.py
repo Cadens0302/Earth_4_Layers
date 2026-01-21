@@ -133,7 +133,13 @@ with tab4:
     st.write("")
 
 with tab5:
+    st.header("Mantle")
+    st.write("")
 
 with tab6:
+    st.header("Outer Core")
+    st.write("")
 
 with tab7:
+    st.header("Inner Core")
+    st.write("")
