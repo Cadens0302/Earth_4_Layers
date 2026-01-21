@@ -6,7 +6,7 @@ st.divider()
 
 unit_list = ("Miles(mi)", "Kilometers(km)")
 
-tab1, tab2, tab3 = st.tabs(["About", "Find Info", "Results"])
+tab1, tab2, tab3, tab4, tab5, tab6, tab7= st.tabs(["About", "Find Info", "Results", "Crust", "Mantle", "Outer Core", "Inner Core"])
 
 layer = ""
 material = ""
@@ -114,7 +114,7 @@ with tab3:
     st.header("Results")
 
     if layer == "":
-        st.warning("You haven't entered anything yet. Go to the Find Info tab, enter a depth, and click Find Info ✅.")
+        st.warning("You haven't entered anything yet. Go to the Find Info tab, enter a depth, and click Find Info.")
         st.stop()
 
     if layer == "":
@@ -128,3 +128,12 @@ with tab3:
         else:
             st.write(" Estimated Temperature:", round(temp, 2), "°C")
 
+with tab4:
+    st.header("Crust")
+    st.write("")
+
+with tab5:
+
+with tab6:
+
+with tab7:
