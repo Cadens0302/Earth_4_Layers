@@ -127,7 +127,7 @@ with tab_find_info:
 
 with tab_crust:
 
-    col1, col2 = st.columns([1, 2])
+    col1, col2 = st.columns([1, 1.2])
 
 
     with col1:
