@@ -123,7 +123,7 @@ with tab_find_info:
             else:
                 st.write(" Estimated Temperature:", round(temp, 2), "°C")
     
-col1, col2 = st.columns([1, 4])
+col1, col2 = st.columns([1, 2])
 
 with tab_crust:
 
