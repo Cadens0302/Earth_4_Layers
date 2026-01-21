@@ -129,9 +129,9 @@ with tab_crust:
 
     col1, col2 = st.columns([1, 2])
 
-    st.header("Crust")
 
     with col1:
+        st.header("Crust")
         st.write("To start off, the crust is the most outer layer of our plant, and is the thinist layer. It is 25 miles (40 kilometers) thick, and is made out of two diffrent types of crust, continental, and oceanic. ")
 
         st.write("Information Found: https://education.nationalgeographic.org/resource/crust/")
