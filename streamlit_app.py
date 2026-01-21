@@ -143,7 +143,7 @@ with tab_crust:
     st.markdown("**Information Found:** https://education.nationalgeographic.org/resource/crust/")
 
     with col2:
-        st.image('https://www.natgeokids.com/wp-content/uploads/2014/04/structure-of-the-earth-%E2%80%93-earths-crust.jpg', caption = 'Picture from National Geographic Kids: The Crust', width = 350)
+        st.image('https://www.natgeokids.com/wp-content/uploads/2014/04/structure-of-the-earth-%E2%80%93-earths-crust.jpg', caption = 'Picture from National Geographic Kids: The Crust', width = 300)
 
 
 
