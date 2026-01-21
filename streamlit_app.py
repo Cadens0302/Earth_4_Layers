@@ -17,7 +17,7 @@ with tab_about:
     st.header("Instructions")
     st.write(
     "To use this app, type a number into the Enter Depth box, then choose whether your depth is in Miles (mi) or "
-    "Kilometers (km). After that, click the Find Info  button, and the Results tab will show you the Earth layer, "
+    "Kilometers (km). After that, click the Find Info button, and the results will print out, showing you the Earth layer, "
     "material, temperature at that depth, etc."
 )
 
@@ -37,7 +37,7 @@ with tab_about:
     st.write("- Inner Core: 5100 km to 6371 km")
 
     st.markdown(
-        "**IMPORTANT NOTE**: The temperature values are simplified estimates using formulas, so they might not be accurate."
+        "**IMPORTANT NOTE**: The temperature values are estimates created using formulas, so they might not be accurate."
     )
 
 with tab_find_info:
