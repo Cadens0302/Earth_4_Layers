@@ -136,7 +136,7 @@ with tab_crust:
 
         
     st.write("Oceanic crust, the crust beneath the ocean floor, is mostly made up basalt. On the otherhand, continental crust is mostly composed of diffrent types granite, and can be much thicker that oceanic crust. ")
-    st.write("Information Found: https://education.nationalgeographic.org/resource/crust/")
+    st.markdown("**Information Found:** https://education.nationalgeographic.org/resource/crust/")
 
     with col2:
         st.image('https://www.natgeokids.com/wp-content/uploads/2014/04/structure-of-the-earth-%E2%80%93-earths-crust.jpg', caption = 'Picture from National Geographic Kids: The Crust', width = 350)
