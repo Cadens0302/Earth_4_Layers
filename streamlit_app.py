@@ -115,10 +115,6 @@ with tab3:
 
     if layer == "":
         st.warning("You haven't entered anything yet. Go to the Find Info tab, enter a depth, and click Find Info.")
-        st.stop()
-
-    if layer == "":
-        st.write("Enter a depth in the Find Info tab and click Find Info.")
     else:
         st.write("Layer:", layer)
         st.write("Material:", material)
