@@ -123,12 +123,20 @@ with tab_find_info:
             else:
                 st.write(" Estimated Temperature:", round(temp, 2), "°C")
     
+col1, col2 = st.columns([1, 3])
+
 with tab_crust:
+
     st.header("Crust")
-    st.write("To start off, the crust is the most outer layer of our plant, and is the thinist layer. It is 25 miles (40 kilometers) thick, and is made out of two diffrent types of crust, continental, and oceanic. ")
-    st.write("Oceanic crust, the crust beneath the ocean floor, is mostly made up basalt. On the otherhand, continental crust is mostly composed of diffrent types granite, and can be much thicker that oceanic crust. ")
-    st.write("Information Found: https://education.nationalgeographic.org/resource/crust/")
-    st.image('https://www.natgeokids.com/wp-content/uploads/2014/04/structure-of-the-earth-%E2%80%93-earths-crust.jpg', caption = 'Picture from National Geographic Kids: The Crust', width = 350)
+
+    with col1:
+        st.write("To start off, the crust is the most outer layer of our plant, and is the thinist layer. It is 25 miles (40 kilometers) thick, and is made out of two diffrent types of crust, continental, and oceanic. ")
+        st.write("Oceanic crust, the crust beneath the ocean floor, is mostly made up basalt. On the otherhand, continental crust is mostly composed of diffrent types granite, and can be much thicker that oceanic crust. ")
+        st.write("Information Found: https://education.nationalgeographic.org/resource/crust/")
+
+    with col3:
+        st.image('https://www.natgeokids.com/wp-content/uploads/2014/04/structure-of-the-earth-%E2%80%93-earths-crust.jpg', caption = 'Picture from National Geographic Kids: The Crust', width = 350)
+
 with tab_mantle:
     st.header("Mantle")
     st.write("")
