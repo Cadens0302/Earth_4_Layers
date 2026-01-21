@@ -6,13 +6,13 @@ st.divider()
 
 unit_list = ("Miles(mi)", "Kilometers(km)")
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7= st.tabs(["About", "Find Info", "Results", "Crust", "Mantle", "Outer Core", "Inner Core"])
+tab_about, tab_find_info, tab_crust, tab_mantle, tab_outer_core, tab_inner_core, = st.tabs(["About", "Find Info", "Crust", "Mantle", "Outer Core", "Inner Core"])
 
 layer = ""
 material = ""
 temp = 0
 
-with tab1:
+with tab_about:
 
     st.header("Instructions")
     st.write(
@@ -40,7 +40,7 @@ with tab1:
         "**IMPORTANT NOTE**: The temperature values are simplified estimates using formulas, so they might not be accurate."
     )
 
-with tab2:
+with tab_find_info:
     st.header("Find Info")
     st.write("")
 
@@ -108,34 +108,33 @@ with tab2:
         else:
             temp = 5000 + ((depth_km - 5100) * 1.10)
 
-        st.success("Done! Now go to the Results tab to see your results.")
+        st.divider()
 
-with tab3:
-    st.header("Results")
+        st.header("Results")
 
-    if layer == "":
-        st.warning("You haven't entered anything yet. Go to the Find Info tab, enter a depth, and click Find Info.")
-    else:
-        st.write("Layer:", layer)
-        st.write("Material:", material)
-
-        if temp == "Invalid" or temp == "Outside Earth":
-            st.write("Estimated Temperature:", temp)
+        if layer == "":
+            st.warning("You haven't entered anything yet. Go to the Find Info tab, enter a depth, and click Find Info.")
         else:
-            st.write(" Estimated Temperature:", round(temp, 2), "°C")
+            st.write("Layer:", layer)
+            st.write("Material:", material)
 
-with tab4:
+            if temp == "Invalid" or temp == "Outside Earth":
+                st.write("Estimated Temperature:", temp)
+            else:
+                st.write(" Estimated Temperature:", round(temp, 2), "°C")
+    
+with tab_crust:
     st.header("Crust")
-    st.write("")
+    st.write("To start off, the crust is the most outer layer of our plant, and is the thinist layer. It is 25 miles (40 kilometers) thickIt is made out of two diffrent types of crust, continental, and oceanic. ")
 
-with tab5:
+with tab_mantle:
     st.header("Mantle")
     st.write("")
 
-with tab6:
+with tab_outer_core:
     st.header("Outer Core")
     st.write("")
 
-with tab7:
+with tab_inner_core:
     st.header("Inner Core")
     st.write("")
