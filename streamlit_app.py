@@ -150,7 +150,7 @@ with tab_mantle:
 
     st.header("Mantle")
     st.write("")
-    st.write("To begin with, the mantle is the second layer of the Earth, and lies between the crust, and the outer core. The mantle is about 2,900 kliometers (1,802 miles) thick, and makes up 84% of the Earth's total volume.")
+    st.write("To begin with, the mantle is the second layer of the Earth, and lies between the crust, and the outer core. It is a semi-solid, and is about 2,900 kliometers (1,802 miles) thick. The mantle makes up 84% of the Earth's total volume.")
     st.write("The mantel is divided up into a few diffrent layers: the upper mantle, transition zone, lower mantle, and the D double-prime. ")
     st.write("")
     st.markdown("**Summary:**")
@@ -162,6 +162,7 @@ with tab_mantle:
 with tab_outer_core:
     st.header("Outer Core")
     st.write("")
+    st.write("In the first place, the outer core is the ")
 
 with tab_inner_core:
     st.header("Inner Core")
