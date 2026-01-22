@@ -152,6 +152,12 @@ with tab_mantle:
     st.write("")
     st.write("To begin with, the mantle is the second layer of the Earth, and lies between the crust, and the outer core. The mantle is about 2,900 kliometers (1,802 miles) thick, and makes up 84% of the Earth's total volume.")
     st.write("The mantel is divided up into a few diffrent layers: the upper mantle, transition zone, lower mantle, and the D double-prime. ")
+    st.write("")
+    st.markdown("**Summary:**")
+    st.write("The mantle is largest layer of Earth, and is made up of a few diffrent layers. ")
+    st.write("")
+    st.markdown("**Information Found:**")
+    st.write("https://education.nationalgeographic.org/resource/mantle/")
 
 with tab_outer_core:
     st.header("Outer Core")
