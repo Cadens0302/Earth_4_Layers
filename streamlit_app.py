@@ -6,7 +6,7 @@ st.divider()
 
 unit_list = ("Miles(mi)", "Kilometers(km)")
 
-tab_about, tab_find_info, tab_crust, tab_mantle, tab_outer_core, tab_inner_core, = st.tabs(["About", "Find Info", "Crust", "Mantle", "Outer Core", "Inner Core"])
+tab_about, tab_find_info, tab_crust, tab_mantle, tab_outer_core, tab_inner_core, tab_how, = st.tabs(["About", "Find Info", "Crust", "Mantle", "Outer Core", "Inner Core", "How I Coded This?",])
 
 layer = ""
 material = ""
@@ -132,24 +132,25 @@ with tab_crust:
 
     with col1:
         st.header("Crust")
-        st.write("To start off, the crust is the most outer layer of our plant, and is the thinist layer. It is 25 miles (40 kilometers) thick, and is made out of two diffrent types of crust, continental, and oceanic. ")
+        st.write("")
+        st.write("To start off, the crust is the most outer layer of our plant, and is the thinist layer. It is next to the manlte, and is 25 miles (40 kilometers) thick. The crust is made out of two diffrent types of crust, continental, and oceanic. ")
 
         
-    st.write("Oceanic crust, the crust beneath the ocean floor, is mostly made up basalt. On the otherhand, continental crust is mostly composed of diffrent types granite, and can be much thicker that oceanic crust. ")
+    st.write("Oceanic crust, the crust beneath the ocean floor, is mostly made up basalt. On the otherhand, continental crust is mostly composed of diffrent types granite, and can be much thicker that oceanic crust because continetal crust stands taller, and penertrates deeper into the mantle, than oceanic crust. ")
+    st.write("")
     st.write("")
     st.markdown("**Summary:**")
     st.write("Earth's Crust is made or two types oceanic, and continental. And is also the thinnest layer of the Earth.")
     st.write("")
-    st.markdown("**Information Found:** https://education.nationalgeographic.org/resource/crust/")
+    st.markdown("**Information Found:** https://education.nationalgeographic.org/resource/crust/, and https://www.amnh.org/exhibitions/permanent/planet-earth/how-has-the-earth-evolved/the-earths-crust")
 
     with col2:
         st.image('https://www.natgeokids.com/wp-content/uploads/2014/04/structure-of-the-earth-%E2%80%93-earths-crust.jpg', caption = 'Picture from National Geographic Kids: The Crust', width = 300)
 
-
-
 with tab_mantle:
     st.header("Mantle")
     st.write("")
+    st.write("Please Type Here!")
 
 with tab_outer_core:
     st.header("Outer Core")
@@ -157,4 +158,8 @@ with tab_outer_core:
 
 with tab_inner_core:
     st.header("Inner Core")
+    st.write("")
+
+with tab_how:
+    st.header("How I Coded My Webstite?")
     st.write("")
