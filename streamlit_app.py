@@ -129,11 +129,10 @@ with tab_crust:
 
     col1, col2 = st.columns([1, 1.2])
 
-
     with col1:
         st.header("Crust")
         st.write("")
-        st.write("To start off, the crust is the most outer layer of our plant, and is the thinist layer. It is next to the manlte, and is 25 miles (40 kilometers) thick. The crust is made out of two diffrent types of crust, continental, and oceanic. ")
+        st.write("To start off, the crust is the most outer layer of our plant, and is the thinist layer. It is next to the manlte, and is 25 miles (40 kilometers) thick. The crust solid, and is made out of two diffrent types of crust, continental, and oceanic. ")
 
         
     st.write("Oceanic crust, the crust beneath the ocean floor, is mostly made up basalt. On the otherhand, continental crust is mostly composed of diffrent types granite, and can be much thicker that oceanic crust because continetal crust stands taller, and penertrates deeper into the mantle, than oceanic crust. ")
@@ -148,9 +147,11 @@ with tab_crust:
         st.image('https://www.natgeokids.com/wp-content/uploads/2014/04/structure-of-the-earth-%E2%80%93-earths-crust.jpg', caption = 'Picture from National Geographic Kids: The Crust', width = 300)
 
 with tab_mantle:
+
     st.header("Mantle")
     st.write("")
-    st.write("Please Type Here!")
+    st.write("To begin with, the mantle is the second layer of the Earth, and lies between the crust, and the outer core. The mantle is about 2,900 kliometers (1,802 miles) thick, and makes up 84% of the Earth's total volume.")
+    st.write("The mantel is divided up into a few diffrent layers: the upper mantle, transition zone, lower mantle, and the D double-prime. ")
 
 with tab_outer_core:
     st.header("Outer Core")
