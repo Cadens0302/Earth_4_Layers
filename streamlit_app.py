@@ -220,4 +220,4 @@ with tab_how:
     st.subheader("Use of If Statments")
     st.write("")
     st.image('https://snipboard.io/gXSv68.jpg', caption = 'The If Statements In My Code', width = 800)
-    st.write("When coding this website, I uuesdif statements because they helped my program make decision based on what the user type in. ")
+    st.write("As you can see in the photo, I used if statements because they help my program figure out what to show the user based on the depth they type in. I used if, elif, and else statements to find the correct Earth layer, what material it is made of, and the temperature at that depth. For the temperature, I searched up formulas to estimate how hot it gets deeper inside the Earth. The variable depth_km is the depth the user entered, and it is used in the formulas. If the user enters the depth in miles, my code converts it into kilometers using this line: depth_km = depth * 1.60934.")
