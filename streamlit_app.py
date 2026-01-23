@@ -185,8 +185,24 @@ with tab_outer_core:
     st.write("https://education.nationalgeographic.org/resource/core/")
 
 with tab_inner_core:
-    st.header("Inner Core")
+
+    col_left_inner_core, col_right_inner_core = st.columns([1, 1.2])
+
+    with col_left_inner_core:
+        st.header("Inner Core")
+        st.write("")
+        st.write("One key aspect of the Earth is its the inner core. The inner core is the last main layer of the Earth, and is surronded by the outer core. This large solid ball is mostly made of iron, and has a radius of about 1,220 kilometers (758 miles). The inner core's temperature is 5,200° C (9,392° F). Since the inner core's temperature is so high the temperature exceeded the melting point of iron. Which is 1538°C (2800°F). ")
+    st.write("However, unlike the outer core, the inner core is not liquid, the liquid core is solid! The inner core is solid because of the inner's core pressure. ")
     st.write("")
+    
+    with col_right_inner_core:
+        st.image('https://www.datocms-assets.com/117510/1722316226-earth-structure20151004-11221-1dikwzi.jpg?auto=format&fit=max&w=1200', caption = 'Picture from Science Learning Hub: The Inner Core', width = 400)
+        st.write("")
+    st.markdown("**Summary:**")
+    st.write("The inner core is the last main layer of the Earth, and is a solid though the temperature is way above iron's melting point.")
+    st.write("")
+    st.markdown("**Information Found:**")
+    st.write("https://education.nationalgeographic.org/resource/core/")
 
 with tab_how:
     st.header("How I Coded My Webstite?")
