@@ -44,7 +44,7 @@ with tab_find_info:
     st.header("Find Info")
     st.write("")
 
-    find_layer = st.text_input("Enter Depth")
+    find_layer = st.text_input("Enter Depth Between")
 
     selected_option = st.selectbox(
         "Enter Unit for Depth",
@@ -210,4 +210,14 @@ with tab_how:
 
     st.divider()
 
-    st.subheader("How to Write in Streamlit:")
+    st.subheader("Basic UI Coding:")
+    st.write("")
+    st.image('https://snipboard.io/tNAqH1.jpg', caption = 'The First Few Lines of My Code', width = 800)
+    st.write("In Streamlit, to code basic UI (User Interface), you have to start the code with st, and then enter whatever you want to do. When using st.*blank*, you can write by coding st.write(""), you can add a button by coding st.button(), you can do a multi-select box by coding st.selectbox(), you can let the user type something by coding st.text_input(""), and there are many UI functions you can code by using st.**blank**.") 
+    
+    st.divider()
+
+    st.subheader("Use of If Statments")
+    st.write("")
+    st.image('https://snipboard.io/gXSv68.jpg', caption = 'The If Statements In My Code', width = 800)
+    st.write("When coding this website, I uuesdif statements because they helped my program make decision based on what the user type in. ")
