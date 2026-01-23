@@ -6,7 +6,7 @@ st.divider()
 
 unit_list = ("Miles(mi)", "Kilometers(km)")
 
-tab_about, tab_find_info, tab_crust, tab_mantle, tab_outer_core, tab_inner_core, tab_how, = st.tabs(["About", "Find Info", "Crust", "Mantle", "Outer Core", "Inner Core", "How I Coded This?",])
+tab_about, tab_find_info, tab_crust, tab_mantle, tab_outer_core, tab_inner_core, tab_how, = st.tabs(["About", "Find Info", "Crust", "Mantle", "Outer Core", "Inner Core", "How I Coded My Website?",])
 
 layer = ""
 material = ""
@@ -127,9 +127,9 @@ with tab_find_info:
 
 with tab_crust:
 
-    col1, col2 = st.columns([1, 1.2])
+    col_left_crust, col_right_crust = st.columns([1, 1.2])
 
-    with col1:
+    with col_left_crust:
         st.header("Crust")
         st.write("")
         st.write("To start off, the crust is the most outer layer of our plant, and is the thinist layer. It is next to the manlte, and is 25 miles (40 kilometers) thick. The crust solid, and is made out of two diffrent types of crust, continental, and oceanic. ")
@@ -143,16 +143,23 @@ with tab_crust:
     st.write("")
     st.markdown("**Information Found:** https://education.nationalgeographic.org/resource/crust/, and https://www.amnh.org/exhibitions/permanent/planet-earth/how-has-the-earth-evolved/the-earths-crust")
 
-    with col2:
+    with col_right_crust:
         st.image('https://www.natgeokids.com/wp-content/uploads/2014/04/structure-of-the-earth-%E2%80%93-earths-crust.jpg', caption = 'Picture from National Geographic Kids: The Crust', width = 300)
 
 with tab_mantle:
 
-    st.header("Mantle")
-    st.write("")
-    st.write("To begin with, the mantle is the second layer of the Earth, and lies between the crust, and the outer core. It is a semi-solid, and is about 2,900 kliometers (1,802 miles) thick. The mantle makes up 84% of the Earth's total volume.")
-    st.write("The mantel is divided up into a few diffrent layers: the upper mantle, transition zone, lower mantle, and the D double-prime. ")
-    st.write("")
+    col_left_mantle, col_right_mantle = st.columns([1, 1.2])
+
+    with col_left_mantle:
+        st.header("Mantle")
+        st.write("")
+        st.write("To begin with, the mantle is the second layer of the Earth, and lies between the crust, and the outer core. It is a semi-solid, and is about 2,900 kliometers (1,802 miles) thick. The mantle makes up 84% of the Earth's total volume.")
+    
+    st.write("The mantle is divided up into a few diffrent layers: the upper mantle, transition zone, lower mantle, and the D double-prime. ")
+
+    with col_right_mantle:
+        st.image('https://images.nationalgeographic.org/image/upload/v1638890152/EducationHub/photos/mantle-convection.jpg', caption = 'Picture from National Geographic Education: The Mantle', width = 400)
+        st.write("")
     st.markdown("**Summary:**")
     st.write("The mantle is largest layer of Earth, and is made up of a few diffrent layers. ")
     st.write("")
@@ -160,9 +167,22 @@ with tab_mantle:
     st.write("https://education.nationalgeographic.org/resource/mantle/")
 
 with tab_outer_core:
-    st.header("Outer Core")
+
+    col_left_outer_core, col_right_outer_core = st.columns([1, 0.8])
+
+    with col_right_outer_core:
+        st.header("Outer Core")
+        st.write("")
+        st.write("In the first place, the outer core is the third main layer of Earth, and is between the mantle, and the inner core. The outer core is about 2,200 kilometers (1,367 miles) thick, and is in a liquid form, made from liquid iron and nickel. These two types of metal are very hot, and is about 5,000° C (9,032° F). This is an important layer for Earth because it creates the Earth's magnetic field, keeping us humans on the ground. ")
+
+    with col_left_outer_core:
+        st.image('https://collins.in/ebooks/csa/html/images/structure.png', caption = 'Picture from National Geographic Education: The Outer Core', width = 400)
+        st.write("")
+    st.markdown("**Summary:**")
+    st.write("The outer core is the third main layer of the Earth, and creates the Earth's magnetic field.")
     st.write("")
-    st.write("In the first place, the outer core is the ")
+    st.markdown("**Information Found:**")
+    st.write("https://education.nationalgeographic.org/resource/core/")
 
 with tab_inner_core:
     st.header("Inner Core")
